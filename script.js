@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             document.getElementById('splash-screen').classList.add('hidden');
             document.getElementById('poster-popup').classList.add('show');
-        }, 2000); // Wait 2 seconds before showing poster
+        }, 800);
     });
 
     // Close poster
