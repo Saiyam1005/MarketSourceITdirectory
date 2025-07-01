@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             document.getElementById('splash-screen').classList.add('hidden');
             document.getElementById('poster-popup').classList.add('show');
-        }, 800);
+        }, 1000);
     });
 
     // Close poster
