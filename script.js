@@ -18,10 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
         links.classList.remove('show');
     });
     window.addEventListener('load', () => {
+        // shorten splash time to make site feel faster
         setTimeout(() => {
             document.getElementById('splash-screen').classList.add('hidden');
             document.getElementById('poster-popup').classList.add('show');
-        }, 1000);
+        }, 400);
     });
 
     // Close poster

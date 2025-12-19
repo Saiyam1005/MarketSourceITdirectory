@@ -512,14 +512,14 @@ footer {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
 .splash-screen img {
     width: 150px;
     max-width: 60vw;
     height: auto;
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 0.4s ease-in-out;
 }
 
 /* Fade animation */
@@ -566,7 +566,7 @@ footer {
     z-index: 9998;
     visibility: hidden;
     opacity: 0;
-    transition: 0.4s ease;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
 .poster-popup.show {
@@ -577,33 +577,88 @@ footer {
 .poster-box {
     position: relative;
     background: #fff;
-    padding: 10px;
+    padding: 20px;
     border-radius: 15px;
-    max-width: 90%;
-    width: 300px;
+    max-width: 480px;
+    width: min(90%, 480px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
 }
 
 .poster-box img {
     width: 100%;
     height: auto;
+    max-height: 60vh;
+    object-fit: contain;
     display: block;
     border-radius: 10px;
+}
+.posbtn {
+    background-color: #002244;
+    border: 2px solid #dddddd;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    align-self: center;
+}
+
+.posbtn:hover {
+    background-color: #ff0000;
+
 }
 
 .close-btn {
     position: absolute;
-    top: -15px;
-    right: -15px;
+    top: 8px;
+    right: 8px;
     background: #ff0000;
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     border: none;
     border-radius: 50%;
-    padding: 5px 10px;
+    padding: 6px 10px;
     cursor: pointer;
     z-index: 10000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Desktop enhancements for poster popup */
+@media screen and (min-width: 769px) {
+    .poster-box {
+        max-width: 720px;
+        width: min(90%, 720px);
+        padding: 32px;
+        gap: 20px;
+        border-radius: 18px;
+    }
+
+    .poster-box img {
+        max-height: 75vh;
+        object-fit: contain;
+        border-radius: 12px;
+    }
+
+    .posbtn {
+        padding: 14px 36px;
+        font-size: 1.05rem;
+        border-radius: 30px;
+    }
+
+    .close-btn {
+        top: 12px;
+        right: 12px;
+        font-size: 22px;
+        padding: 6px 12px;
+    }
 }
 
 /* Responsive Adjustments */
