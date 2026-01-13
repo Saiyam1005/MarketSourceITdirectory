@@ -49,7 +49,7 @@ fetch("dealers.txt")
 
         card.innerHTML = `
   <div class="dealer-name-pill">${d.name}</div>
-
+  <div class="dealer-info">
   <p class="dealer-line">
     <i class="fa-solid fa-location-dot"></i>
     <span>${d.address || "Not Available"}</span>
@@ -64,6 +64,7 @@ fetch("dealers.txt")
     <i class="fa-solid fa-phone"></i>
     <span>${d.mobile || "Not Available"}</span>
   </p>
+  </div>
 `;
 
 

@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', () => {
         links.classList.remove('show');
     });
-    window.addEventListener('load', () => {
-        // shorten splash time to make site feel faster
-        setTimeout(() => {
-            document.getElementById('splash-screen').classList.add('hidden');
-            document.getElementById('poster-popup').classList.add('show');
-        }, 400);
-    });
+    // Hide splash shortly after DOM is ready to improve perceived load time
+    setTimeout(() => {
+        const splash = document.getElementById('splash-screen');
+        const poster = document.getElementById('poster-popup');
+        if (splash) splash.classList.add('hidden');
+        if (poster) poster.classList.add('show');
+    }, 300);
 
     // Close poster
     document.getElementById('close-poster').addEventListener('click', () => {
